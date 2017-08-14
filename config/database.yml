@@ -20,6 +20,20 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  min_messages: WARNING
+  pool: 5
+
+development:
+  <<: *default
+  database: growers_outlet-development
+
+test:
+  <<: *default
+  database: growers_outlet-test
+
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: growers_outlet-production
