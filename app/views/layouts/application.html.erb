@@ -4,11 +4,12 @@
     <title>GrowersOutlet2</title>
     <%= csrf_meta_tags %>
 
-    <link rel="stylesheet" href="http://0.0.0.0:8080/packs/app.css" />
+    <%= stylesheet_pack_tag 'app' %>
   </head>
 
   <body>
     <%= yield %>
   </body>
   <%= javascript_pack_tag("app") %>
+  <script type="text/javascript" src="/assets/inventory.js"></script>
 </html>
