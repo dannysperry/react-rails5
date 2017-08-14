@@ -1,0 +1,16 @@
+.root {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  height: 100%;
+  color: red;
+
+  :global {
+    ul, menu, dir {
+      -webkit-padding-start: 0;
+    }
+  }
+}
+
+.Routes {
+  width: 100vw;
+  height: 80vh;
+}

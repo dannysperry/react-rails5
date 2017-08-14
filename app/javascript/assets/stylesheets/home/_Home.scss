@@ -1,0 +1,10 @@
+.root {
+  position: absolute;
+
+  :global {
+    .rh5v-DefaultPlayer_video {
+      height: initial;
+    }
+  }
+}
+

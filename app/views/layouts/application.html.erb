@@ -4,11 +4,11 @@
     <title>GrowersOutlet2</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <link rel="stylesheet" href="http://0.0.0.0:8080/packs/app.css" />
   </head>
 
   <body>
     <%= yield %>
   </body>
+  <%= javascript_pack_tag("app") %>
 </html>

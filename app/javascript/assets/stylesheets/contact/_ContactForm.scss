@@ -1,0 +1,56 @@
+$c-valid: #ddffdd;
+$c-invalid: #ffdddd;
+
+$c-required-valid: #008000;
+$c-required: #800000;
+
+$formWidth: 30vw;
+$inputTopMargin: 18px;
+
+.root {
+  width: $formWidth;
+
+  :global {
+    input, textarea, label, button {
+      width: $formWidth;
+    }
+
+    label {
+      display: inline-block;
+      margin-top: $inputTopMargin;
+    }
+
+    button {
+      margin-top: $inputTopMargin*2;
+    }
+
+    input, textarea {
+      &:invalid {
+        background-color: $c-invalid;
+      }
+
+      &:valid {
+        background-color: $c-valid;
+      }
+
+      &:required {
+        border-color: $c-required;
+        border-width: 3px;
+
+        &:valid {
+          border-color: $c-required-valid;
+        }
+      }
+    }
+
+    form {
+      &:invalid {
+        border: 5px solid $c-invalid;
+      }
+
+      &:valid {
+        border: 5px solid $c-valid;
+      }
+    }
+  }
+}
