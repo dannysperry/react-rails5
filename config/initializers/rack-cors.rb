@@ -5,7 +5,7 @@ if defined? Rack::Cors
         https://growers-outlet.herokuapp.com
         http://growers-outlet.herokuapp.com
       ]
-      resource '/assets/*'
+      resource '/packs/*'
     end
   end
 end
