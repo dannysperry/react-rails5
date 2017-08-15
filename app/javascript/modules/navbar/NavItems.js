@@ -14,9 +14,9 @@ const NavItems = (props) => (
       </Logo>
     </li>
     {navRoutes.map((route, i) => (
-      <li key={i}>
+      <li key={route.key}>
         <Link to={route.path}>
-          {route.component.name}
+          {route.key}
         </Link>
       </li>
     ))}
