@@ -11,8 +11,8 @@ class Menu extends Component {
     return(
       <div className={styles.root}>
         <inventory-list
-          menu-id={GREENBITS_API_KEY}
-          menu-api-key={GREENBITS_MENU_ID}
+          menu-id={GREENBITS_MENU_ID}
+          menu-api-key={GREENBITS_API_KEY}
           default-item
           default-group-header>
           <div>
