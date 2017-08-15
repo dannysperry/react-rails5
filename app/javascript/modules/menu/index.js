@@ -12,7 +12,7 @@ class Menu extends Component {
       <div className={styles.root}>
         <inventory-list
           menu-id={GREENBITS_API_KEY}
-          manu-api-key={GREENBITS_MENU_ID}
+          menu-api-key={GREENBITS_MENU_ID}
           default-item
           default-group-header>
           <div>
