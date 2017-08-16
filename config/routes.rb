@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
   get '/menu', to: 'application#home'
   get '/contact', to: 'application#home'
+
+  post '/contact', to: 'contact#create'
 end
