@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
-
 import { DefaultPlayer as Video } from 'html5video'
-import 'html5video/dist/styles.css'
-import styles from 'stylesheets/home/_HomeVideo'
+
 import Filter from './Filter'
 
 import Poster from 'images/cover/Earlybird.jpg'
 import WebmPoster from 'images/cover/Earlybird.webm'
 import Mp4Poster from 'images/cover/Earlybird.mp4'
+
+import 'html5video/dist/styles.css'
+import styles from 'stylesheets/home/_HomeVideo'
 
 class HomeVideo extends Component {
   constructor(props) {
