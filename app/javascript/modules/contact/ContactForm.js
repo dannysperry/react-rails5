@@ -1,5 +1,6 @@
 import React, { createClass, Component } from 'react'
 import { render } from 'react-dom'
+import axios from 'axios'
 
 import styles from 'stylesheets/contact/_ContactForm'
 
@@ -28,9 +29,19 @@ class ContactForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log(`email: ${this.state.email}`)
-    console.log(`name: ${this.state.name}`)
-    console.log(`description: ${this.state.description}`)
+    var params = {
+      email: this.state.email,
+      name: this.state.name,
+      description: this.state.description
+    }
+    axios.post('/contact', params)
+      .then(function (response) {
+        // console.log(response)
+      })
+      .catch(function (error) {
+        // console.log(error)
+      });
+
   }
 
   render() {
