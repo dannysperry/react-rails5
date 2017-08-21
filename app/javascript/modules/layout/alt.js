@@ -2,16 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import routes from 'config/routes'
 
-import NavBar from '../navbar'
-
-const logo = <h1>Welcome to FirePit!</h1>
+import Header from '../header'
 
 const App = (props) => (
   <Router>
     <div className='App'>
-
-      <NavBar logo={logo} />
-
+      <Header />
       <div className='Routes'>
         <Switch>
           {routes.map((route, i) => (
