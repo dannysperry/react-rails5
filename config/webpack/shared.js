@@ -37,11 +37,11 @@ module.exports = {
 
   plugins: [
     new webpack.EnvironmentPlugin(JSON.parse(JSON.stringify(env))),
-    new ExtractTextPlugin(env.NODE_ENV === 'production' ? '[name]-[hash].css' : '[name].css'),
     new ManifestPlugin({
       publicPath: output.publicPath,
       writeToFileEmit: true
-    })
+    }),
+    new ExtractTextPlugin(env.NODE_ENV === 'production' ? 'assets/stylesheets/[name]-[hash].css' : 'assets/stylesheets/[name].css')
   ],
 
   resolve: {

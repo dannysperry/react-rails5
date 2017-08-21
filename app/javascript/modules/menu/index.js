@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 const { env } = require('process')
 
-import styles from 'stylesheets/menu/index'
-
 const GREENBITS_API_KEY='gJ1iLEPD5CNKHQMs3BNHYA'
 const GREENBITS_MENU_ID='0049dd84-555d-448d-8929-70ff15e75d77'
 
 class Menu extends Component {
   render() {
     return(
-      <div className={styles.root}>
+      <div className='Menu'>
         <inventory-list
           menu-id={GREENBITS_MENU_ID}
           menu-api-key={GREENBITS_API_KEY}

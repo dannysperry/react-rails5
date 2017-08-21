@@ -4,10 +4,8 @@ import { Link } from 'react-router-dom'
 import routes, { navRoutes } from '../../config/routes'
 import Logo from './Logo'
 
-import styles from 'stylesheets/navbar/_NavItems'
-
 const NavItems = (props) => (
-  <ul className={styles.root}>
+  <ul className='NavItems'>
     <li>
       <Logo>
         {props.logo}

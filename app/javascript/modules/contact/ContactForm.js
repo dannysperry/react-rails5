@@ -2,8 +2,6 @@ import React, { createClass, Component } from 'react'
 import { render } from 'react-dom'
 import axios from 'axios'
 
-import styles from 'stylesheets/contact/_ContactForm'
-
 class ContactForm extends Component {
   constructor(props) {
     super(props);
@@ -46,7 +44,7 @@ class ContactForm extends Component {
 
   render() {
     return (
-      <form className={styles.root} onSubmit={this.handleSubmit}>
+      <form className='ContactForm' onSubmit={this.handleSubmit}>
         <label className='EmailInput'>
           Email:
           <input name='email'

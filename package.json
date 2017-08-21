@@ -2,11 +2,14 @@
   "name": "growers_outlet_2",
   "private": true,
   "scripts": {
+    "yarn:install": "echo 'Beginning yarn install!' && yarn install && echo 'Done installing yarn!'",
+    "clean:local": "echo 'Beginning cleaning in local environment!' && yarn clean && rm -rf .yarnclean && rm -dfr node_modules/ && echo 'Done cleaning local environment!' && yarn yarn:install",
+    "prod:clean": "echo 'Beginning cleaning in production environment!' && rm -Rf 'public/packs' && rm -Rf 'public/assets' && echo 'Done cleaning production environment!'",
     "build": "bin/webpack-dev-server",
     "start": "bin/rails s",
-    "prod:build": "RAILS_ENV=production bin/webpack",
-    "prod:clean": "cd public/packs && rm -rf assets && cd ../../",
-    "prod:local": "yarn prod:clean && yarn prod:build && bin/rails s -e production"
+    "prod:build": "echo 'Beginning production build with webpack!' && RAILS_ENV=production bin/webpack && echo 'Done building webpack for production environment and precompiling assets for rails!' && RAILS_ENV=production bin/rails assets:precompile && echo 'Finished production build!'",
+    "prod:start": "echo 'Starting production server!' && RAILS_SERVE_STATIC_FILES=true RAILS_LOG_TO_STDOUT=true bin/rails s -e production",
+    "prod:local": "yarn clean:local && yarn prod:clean && yarn prod:build && yarn prod:start"
   },
   "engines": {
     "node": ">=v7.7.4",
@@ -33,7 +36,6 @@
     "glob": "^7.1.2",
     "js-yaml": "^3.9.1",
     "node-sass": "^4.5.3",
-    "normalize.css": "^7.0.0",
     "path-complete-extname": "^0.1.0",
     "postcss-loader": "^2.0.6",
     "postcss-smart-import": "^0.7.5",

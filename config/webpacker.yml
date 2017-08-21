@@ -12,8 +12,7 @@ default: &default
     - .sass # assets/stylesheets
     - .scss
     - .css
-    - .svg # assets/images
-    - .png
+    - .png # assets/images
     - .gif
     - .jpeg
     - .jpg

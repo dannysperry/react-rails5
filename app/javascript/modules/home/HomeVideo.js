@@ -8,9 +8,6 @@ import Poster from 'images/cover/Earlybird.jpg'
 import WebmPoster from 'images/cover/Earlybird.webm'
 import Mp4Poster from 'images/cover/Earlybird.mp4'
 
-import 'html5video/dist/styles.css'
-import styles from 'stylesheets/home/_HomeVideo'
-
 class HomeVideo extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +30,7 @@ class HomeVideo extends Component {
 
 
     return (
-      <div className={styles.root}>
+      <div className='HomeVideo'>
         <Video autoPlay loop muted
           controls={[]}
           poster={Poster} >

@@ -2,10 +2,8 @@ import React from 'react';
 
 import NavItems from './NavItems'
 
-import styles from 'stylesheets/navbar/index'
-
 const NavBar = (props) => (
-  <nav className={styles.root}>
+  <nav className='NavBar'>
     <NavItems logo={props.logo}/>
   </nav>
 )
