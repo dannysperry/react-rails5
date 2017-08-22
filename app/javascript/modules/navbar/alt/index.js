@@ -1,29 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import NavItems from './NavItems'
-import LogoImage from 'images/logo/logo.jpg'
+import LogoImage from 'images/logo.png'
 
-const NavBar = (props) => (
-  <nav class="NavBar navbar">
-    <div class="container-fluid">
+class NavBar extends Component {
+  render() {
+    return (
+      <nav className="NavBar navbar">
+        <div className="container-fluid">
 
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">
-          <img class="navbar--logo_img" src={LogoImage} alt="Logo">
-        </a>
-      </div>
+          <div className="navbar-header">
+            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+            </button>
+            <a className="navbar-brand" href="/">
+              <img className="navbar--logo_img" src={LogoImage} alt="Logo" />
+            </a>
+          </div>
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <NavItems />
-      </div>
-    </div>
-  </nav>
-)
+          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <NavItems />
+          </div>
+        </div>
+      </nav>
+    )
+  }
+}
 
 export default NavBar

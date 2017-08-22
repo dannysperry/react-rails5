@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+// 0. Settings
+// If you are using a preprocessor, start here. This holds any global settings for your project. I'd like to stress the word global – this layer should only house settings that need to be accessed from anywhere. Settings like $heading-size-1 should be defined in the Headings partial. This ensures this layer stays nice and slim, and means that most settings can be found alongside the code that uses them, making finding things far simpler.
+// Examples of global settings might be things like the base font size, colour palettes, config (for example, $environment: dev;) and so on.
+@import "0_settings/breakpoints",
+        "0_settings/colors",
+        "0_settings/fonts";
+
+// 1. Tools
+// The next layer houses your globally available tooling – namely mixins and functions. Any mixin or function that does not need accessing globally should belong in the partial to which it relates. The Tools layer comes after the Settings layer because a mixin may require one of the global settings as a default parameter. Examples of global tools might be gradient mixins, font-sizing mixins and so on.
+@import "1_tools/functions",
+        "1_tools/mixins.colors",
+        "1_tools/mixins.overlay";
+
+// 2. Generic
+// The Generic layer is the first one that actually produces any CSS. It houses very high-level, far reaching styles. This layer is seldom modified, and is usually the same across any projects you work on. It contains things like Normalize.css, global box-sizing rules, CSS resets and so on. The Generic layer affects a lot of the DOM, hence it being nice and wide in the Triangle model, and occurring very early on.
+@import "2_generic/normalize";
+
+// 3. Elements
+// These are bare, unclassed HTML elements. What does an h1 look like without a class on it? What does an a look like without a class on it? The Elements layer binds onto bare HTML element (or 'type') selectors only. It is slightly more explicit than the previous layer in that we are now saying 'make every h1 this big', or 'make every a be a certain colour'. It is still a very low-specificity layer, but affects slightly less of the DOM, and is slightly more opinionated, hence its location in the Triangle.
+// The Elements layer is typically the last one in which we'd find bare, element-based selectors, and is very rarely added to or changed after initial setup. Once we have defined element-level styles, all additions and deviations should be implemented using classes.
+@import "3_elements/base",
+        "3_elements/blockquotes",
+        "3_elements/code",
+        "3_elements/description_lists",
+        "3_elements/figures",
+        "3_elements/footer",
+        "3_elements/header",
+        "3_elements/headings",
+        "3_elements/images",
+        "3_elements/links",
+        "3_elements/lists",
+        "3_elements/paragraphs";
+
+// 4. Objects
+// Users of OOCSS will be familiar with the concept of objects. This is the first layer in which we find class-based selectors. These are concerned with styling non-cosmetic design patterns, or 'objects'. Objects can range from something as simple as a .wrapper element, to layout systems, through to things like the OOCSS poster child – the Media Object. This layer affects less of the DOM than the last layer, has a higher specificity, and is slightly more explicit in that we are now targeting sections of the DOM with classes.
+// ex: wrappers and grids
+@import "4_objects/button.call_to_action",
+        "4_objects/button.contact",
+        "4_objects/button.feature",
+        "4_objects/nav_bar.logo",
+        "4_objects/slider";
+
+// 5. Components
+// The Components layer is where we begin to style recognisable pieces of UI. We're still binding onto classes here, so our specificity hasn't yet increased. However, this layer is more explicit than the last one in that we are now styling explicit, designed pieces of the DOM.
+// We shouldn't find any selectors with a lower specificity than one class in this layer. This is where the majority of your work will happen after initial project set-up. Adding new components and features usually makes up the vast majority of development.
+// ex: nav, carousel,
+@import "5_components/global_header",
+        "5_components/nav_bar",
+        "5_components/pagination",
+        "5_components/section.feature";
+
+@import "6_trumps/base";
+
+@import "2_generic/_animate",
+        "2_generic/_responsive";
+

@@ -1,0 +1,41 @@
+#feature {
+  @media (max-width: $desktop-bp) {
+    background-image: none;
+    @include font--green();
+    @include overlay--green();
+  }
+}
+
+#feature {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: visible;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-color: #fff;
+  -webkit-background-size: 45%;
+  -moz-background-size: 45%;
+  -o-background-size: 45%;
+  background-size: 45%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  padding: 100px 0;
+
+  h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  p {
+    color: #8d8f92;
+    margin-bottom: 20px;
+  }
+  .btn {
+    padding: 10px 20px !important;
+  }
+}
