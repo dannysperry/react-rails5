@@ -1,16 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-import routes, { navRoutes } from '../../config/routes'
-import Logo from './Logo'
+import routes, { navRoutes } from 'config/routes'
 
 const NavItems = (props) => (
-  <ul className='NavItems'>
-    <li>
-      <Logo>
-        {props.logo}
-      </Logo>
-    </li>
+  <ul className="NavItems nav navbar-nav navbar-right">
     {navRoutes.map((route, i) => (
       <li key={route.key}>
         <Link to={route.path}>
