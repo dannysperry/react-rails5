@@ -10,7 +10,7 @@ const ContactFooter = props => {
       <div id="contact-box" className="row">
         <div className="col-md-6 col-sm-12">
           <div className="block">
-            <h2>Save our contact information</h2>
+            <h2>Contact Us</h2>
             <ContactInfo />
 
             <SocialIcons />

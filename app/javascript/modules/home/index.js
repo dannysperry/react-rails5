@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Banner from '../banner'
+import ContactFooter from '../contact/ContactFooter'
 
 const Home = (props) => (
   <div className='Home'>
@@ -8,6 +9,7 @@ const Home = (props) => (
       big={true}
       title="Grower's Outlet"
       subtitle="We pride ourselves on providing quality choices by being selective with our vendors." />
+    <ContactFooter />
   </div>
 )
 
