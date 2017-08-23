@@ -1,0 +1,13 @@
+.NavItems {
+  display: flex;
+  height: 65px;
+  align-items: center;
+
+  li a {
+    &:focus, &:hover {
+      background-color: inherit;
+      color: $c-white;
+    }
+  }
+}
+

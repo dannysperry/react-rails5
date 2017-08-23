@@ -1,15 +1,15 @@
 // fonts
 
 @mixin font--blue() {
-  color: $c-blue !important;
+  color: $c-blue;
 }
 
 @mixin font--gray() {
-  color: $c-font !important;
+  color: $c-font;
 }
 
 @mixin font--green {
-  color: $c-green !important;
+  color: $c-green;
 }
 
 
@@ -19,21 +19,21 @@
 @mixin link--yellow() {
   @include font--blue();
   &:hover {
-    color: $c-blue--font--hover !important;
+    color: $c-blue--font--hover;
   }
 }
 
 @mixin link--gray() {
   @include font--gray();
   &:hover {
-    color: $c-font--hover !important
+    color: $c-font--hover
   }
 }
 
 @mixin link--green() {
-  color: $c-green !important;
+  color: $c-green;
   &:hover {
-    color: $c-blue--font--hover !important;
+    color: $c-blue--font--hover;
   }
 }
 
@@ -41,24 +41,24 @@
 
 // buttons
 
-@mixin button--yellow() {
-  background-color: $c-blue !important;
-  color: $c-white !important;
+@mixin button--blue() {
+  background-color: $c-dark_blue;
+  color: $c-white;
 
   &:hover {
-    background-color: $c-blue--font--hover !important;
+    background-color: $c-green;
   }
 }
 
 @mixin button--white() {
-  background-color: $c-white !important;
+  background-color: $c-white;
   @include link--green;
 }
 
 @mixin button--green() {
-  background-color: $c-green !important;
-  color: $c-white !important;
+  background-color: $c-green;
+  color: $c-white;
   &:hover {
-    background-color: $c-green--dark !important;
+    background-color: $c-dark_blue;
   }
 }

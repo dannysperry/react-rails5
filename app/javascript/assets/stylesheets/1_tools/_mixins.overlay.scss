@@ -11,7 +11,7 @@
     background-color: $c-green;
     opacity: 0.8;
   }
-  h2, p {
+  h1, h2, p {
     color: $c-white--text !important;
   }
 }
@@ -29,7 +29,7 @@
     background: linear-gradient(to left, $c-green, $c-green--dark);
     opacity: 0.8;
   }
-  h2, p {
+  h1, h2, p {
     color: $c-white--text !important;
   }
 }

@@ -13,9 +13,9 @@ class Menu extends Component {
           menu-api-key={GREENBITS_API_KEY}
           default-item
           default-group-header>
-          <div>
+          <div className="MenuList">
             <yield to="header">
-              <h1>React Menu [menuName]</h1>
+              <h1>Grower's Outlet Menu</h1>
             </yield>
           </div>
         </inventory-list>

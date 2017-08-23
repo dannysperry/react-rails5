@@ -1,0 +1,15 @@
+.google_map--container {
+  overflow: hidden;
+  height: 300px;
+  width: 555px;
+}
+
+.google_map--canvas {
+  height: 300px;
+  width: 555px;
+
+  img {
+    max-width: none !important;
+    background: none !important;
+  }
+}

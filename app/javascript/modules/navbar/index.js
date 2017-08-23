@@ -5,13 +5,29 @@ import NavItems from './NavItems'
 import LogoImage from 'images/logo.png'
 
 class NavBar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      collapsed: true
+    }
+
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick(event) {
+    this.setState({
+      collapsed: !this.state.collapsed
+    })
+  }
   render() {
+    const buttonClass = `navbar-toggle ${this.state.collapsed ? 'collapsed' : ''}`
+    const dropdownClass= `collapse navbar-collapse ${this.state.collapsed ? '' : 'in'}`
+
     return (
       <nav className="NavBar navbar">
         <div className="container-fluid">
-
           <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" className={buttonClass} onClick={this.handleClick}>
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
@@ -22,7 +38,7 @@ class NavBar extends Component {
             </Link>
           </div>
 
-          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <div className={dropdownClass}>
             <NavItems />
           </div>
         </div>

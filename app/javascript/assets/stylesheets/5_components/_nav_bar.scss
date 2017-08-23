@@ -4,3 +4,18 @@ header {
     font-weight: 800;
   }
 }
+
+.navbar-collapse {
+  border-top: none;
+  box-shadow: none;
+
+  &.in {
+    a {
+      text-align: center;
+    }
+  }
+}
+
+.navbar {
+  margin: 0;
+}

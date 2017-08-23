@@ -1,13 +1,14 @@
 import React from 'react'
 
-import ContactForm from './ContactForm'
+import ContactHeader from './ContactHeader'
+import ContactFooter from './ContactFooter'
 
 const Contact = props => {
   return(
-    <div className='Contact'>
-      <h1>Contact Us!</h1>
-      <ContactForm />
-    </div>
+    <section className="Contact" id="contact-form">
+      <ContactHeader />
+      <ContactFooter />
+    </section>
   )
 }
 
