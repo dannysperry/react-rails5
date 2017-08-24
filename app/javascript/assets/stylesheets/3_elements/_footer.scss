@@ -1,15 +1,24 @@
 footer {
-  background: #F5F5F5;
-  text-align: center;
-  padding-top: 48px;
-  padding-bottom: 55px;
+  img {
+    width: 100%;
+  }
+
+  h2 {
+    font-family: $f-sans;
+    font-weight: 300;
+    color: $c-black;
+    font-size: 28px;
+    padding-bottom: 30px;
+  }
 
   p {
     font-size: 13px;
     line-height: 25px;
-    color: #919191;
+    color: $c-gray;
+    display: block;
   }
+
   a {
-    color: #595959;
+    color: $c-green;
   }
 }

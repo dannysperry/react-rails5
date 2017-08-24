@@ -1,5 +1,5 @@
 {
-  "name": "growers_outlet_2",
+  "name": "change_me",
   "private": true,
   "scripts": {
     "yarn:install": "echo 'Beginning yarn install!' && yarn install && echo 'Done installing yarn!'",
@@ -45,7 +45,6 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-google-maps": "^7.2.0",
-    "react-html5video": "^2.3.0",
     "react-router-dom": "^4.1.2",
     "resolve-url-loader": "^2.1.0",
     "sass-loader": "^6.0.6",

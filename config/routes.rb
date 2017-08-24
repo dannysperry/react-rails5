@@ -1,10 +1,9 @@
 
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'application#home'
+  get '/other', to: 'application#home' # change_me to another route and update the Components
+  # add other routes here for more pages, be sure to add them in app/javascript/config/routes.js
 
-  get '/menu', to: 'application#home'
   get '/contact', to: 'application#home'
-
   post '/contact', to: 'contact#create'
 end

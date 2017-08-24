@@ -25,8 +25,8 @@
       "alias": {
         "stylesheets": './app/javascript/assets/stylesheets',
         "images": "./app/javascript/assets/images",
-        html5video: "./node_modules/react-html5video",
-        "config": "./app/javascript/config"
+        "config": "./app/javascript/config",
+        "modules": "./app/javascript/modules"
       }
     }]
   ]

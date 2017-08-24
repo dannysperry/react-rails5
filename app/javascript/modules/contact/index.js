@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ContactHeader from './ContactHeader'
+import ContactHeader from '../contact_header'
 
 const Contact = props => {
   return(

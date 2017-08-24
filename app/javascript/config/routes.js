@@ -1,7 +1,10 @@
-import Home from '../modules/home'
-import Contact from '../modules/contact'
-import Menu from '../modules/menu'
+import Home from 'modules/home'
+import Contact from 'modules/contact'
 
+// add additional pages here
+import Other from 'modules/menu'
+
+// make sure the Home route is always the first element in the routes array
 const routes = [
   { path: '/',
     component: Home,
@@ -11,9 +14,9 @@ const routes = [
     component: Contact,
     key: 'Contact'
   },
-  { path: '/menu',
-    component: Menu,
-    key: 'Menu'
+  { path: '/other',
+    component: Other,
+    key: 'Other'
   }
 ]
 

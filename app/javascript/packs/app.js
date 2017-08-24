@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import App from '../modules/layout'
+import App from 'modules/layout'
 
 import './main.scss';
 

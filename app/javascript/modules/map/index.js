@@ -1,16 +1,14 @@
 import { default as React, Component, PropTypes } from 'react'
 import AsyncGoogleMap from './AsyncGoogleMap'
+import settings from 'config/settings'
 
-export default class ContactMap extends Component {
+export default class Map extends Component {
   constructor(props) {
     super(props);
     this.state = {
       markers: [{
-        position: {
-          lat: 46.668253,
-          lng: -123.787084,
-        },
-        key: `South Bend, WA`,
+        position: settings.geo.position,
+        key: settings.geo.city,
         defaultAnimation: 2,
       }],
     }
@@ -37,11 +35,8 @@ export default class ContactMap extends Component {
     ];
     this.setState({
       markers: [{
-        position: {
-          lat: 46.668253,
-          lng: -123.787084,
-        },
-        key: `Taiwan`,
+        position: settings.geo.position,
+        key: settings.geo.city,
         defaultAnimation: 2,
       }, ...nextMarkers],
     });

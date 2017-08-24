@@ -1,12 +1,12 @@
 import React from 'react'
 
-import ContactMap from './ContactMap'
+import Map from '../map'
 import ContactInfo from './ContactInfo'
 import SocialIcons from './SocialIcons'
 
-const ContactFooter = props => {
+const Footer = props => {
   return(
-    <div className="ContactFooter container">
+    <footer className="Footer container">
       <div id="contact-box" className="row">
         <div className="col-md-6 col-sm-12">
           <div className="block">
@@ -19,14 +19,12 @@ const ContactFooter = props => {
         <div className="col-md-6 col-sm-12">
           <div className="block">
             <h2>Google Us</h2>
-            <ContactMap />
+            <Map />
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   )
 }
 
-export default ContactFooter
-
-
+export default Footer

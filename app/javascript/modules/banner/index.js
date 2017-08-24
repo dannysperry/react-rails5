@@ -17,15 +17,23 @@ class Banner extends Component {
     title = <h1 className={classNames}>{this.props.title}</h1>
     subtitle = <p className={classNames}>{this.props.subtitle}</p>
 
+    let content = <div className="block">
+                      { title }
+                      { subtitle }
+                    </div>
+
+    if (this.props.children) {
+      content = <div className="block">
+                  { this.props.children }
+                </div>
+    }
+
     return(
       <section id={sectionId} className="Banner">
         <div className="container">
           <div className="row">
             <div className={colSizes}>
-              <div className="block">
-                { title }
-                { subtitle }
-              </div>
+              { content }
             </div>
           </div>
         </div>

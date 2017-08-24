@@ -38,24 +38,22 @@
 // Users of OOCSS will be familiar with the concept of objects. This is the first layer in which we find class-based selectors. These are concerned with styling non-cosmetic design patterns, or 'objects'. Objects can range from something as simple as a .wrapper element, to layout systems, through to things like the OOCSS poster child – the Media Object. This layer affects less of the DOM than the last layer, has a higher specificity, and is slightly more explicit in that we are now targeting sections of the DOM with classes.
 // ex: wrappers and grids
 @import "4_objects/BannerBig",
-        "4_objects/button.feature",
         "4_objects/Contact",
         "4_objects/Menu",
-        "4_objects/nav_bar.logo";
+        "4_objects/maps",
+        "4_objects/nav_bar.logo",
+        "4_objects/navbars",
+        "4_objects/Routes";
 
 // 5. Components
 // The Components layer is where we begin to style recognisable pieces of UI. We're still binding onto classes here, so our specificity hasn't yet increased. However, this layer is more explicit than the last one in that we are now styling explicit, designed pieces of the DOM.
 // We shouldn't find any selectors with a lower specificity than one class in this layer. This is where the majority of your work will happen after initial project set-up. Adding new components and features usually makes up the vast majority of development.
 // ex: nav, carousel,
 @import "5_components/Banner",
-        "5_components/ContactFooter",
         "5_components/ContactHeader",
         "5_components/ContactInfo",
-        "5_components/map",
-        "5_components/nav_bar",
+        "5_components/Footer",
         "5_components/NavItems",
-        "5_components/pagination",
-        "5_components/section.feature",
         "5_components/SocialIcons";
 
 @import "6_trumps/base";

@@ -1,8 +1,0 @@
-#feature {
-  .btn {
-    @include button--green();
-    @media (max-width: $desktop-bp) {
-      @include button--white();
-    };
-  }
-}
